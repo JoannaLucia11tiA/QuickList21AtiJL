@@ -45,3 +45,11 @@ function removeItem(itemName){
 
     showItensList()
 }
+
+function checkItem(itemName){
+    const iten = DataTransferItemList.find((item) => iten.name === itemName)
+
+    iten.checked = !iten.checked 
+
+    showItensList()
+}

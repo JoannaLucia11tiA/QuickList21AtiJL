@@ -1,5 +1,5 @@
 const itens = []
-
+//Aviso que houve correção
 function addItem(){
     const itemName = document.querySelector("#item").value
     

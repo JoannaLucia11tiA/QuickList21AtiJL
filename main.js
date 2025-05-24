@@ -68,4 +68,6 @@ function checkItem(itemName){
     showItensList()
 }
 
-function addHideWarningClass
+function addHideWarningClass(){
+    document.querySelector(".warning").classList.add("hide-warning")
+}

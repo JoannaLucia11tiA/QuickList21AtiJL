@@ -46,11 +46,17 @@ function showItensList(){
 
 function removeItem(itemName){
     const itemIndex = itens.findIndex((item) => item.name === itemName)
+    const divWarning = document.querySelector(".warning")
+
+    divWarning.classList.remove("hide-warning")
+
+    setTimeout(() => {
+        divWarning.classList.add("hide-warning")
+    }, 4000)
 
     if(itemName !== -1){
         itens.splice(itemIndex, 1)
     }
-
 
     showItensList()
 }
@@ -69,10 +75,6 @@ function checkItem(itemName){
     item.checked = !item.checked 
 
     showItensList()
-}
-
-function addHideWarningClass(){
-    document.querySelector(".warning").classList.add("hide-warning")
 }
 
 function verifyLocalStorageItens(){
